@@ -33,25 +33,23 @@ The technical specification should describe the syntax and semantics of any new 
 
 | Item | Description | Behaviors/Properties |
 |:-|:-|:-|
-| **Creation Input** |
-| Creator | write creator to the contract | deploy/can not be changed |
-| Owner | Owner can take full control of contract | multi-owner? / can be changed? |
-| TokenName | Name of token, 3-5 letters | can not be changed |
-| **After Creation** |
-| Admins | Owner can take full control of contract | multi-owner? / can be changed? read: public |
-| Members | | |
+| owner | Owner can take full control of contract | deploy/can not be changed |
+| newPoolAddress | address of new pool | multi-owner? / can be changed? |
+| feeOfRegisterUser | register user fee | can not be changed |
+
+User Struct
+|:-|:-|:-|
+| identity | register user's public key hash | * |
+| publicKey | register user's public hash | * |
 
 
-### Interaction / Functions (example)
+### Interaction / Functions
 
 | Function | Description | Behaviors/Properties |
 |:-|:-|:-|
-| AddOwner | add owner to... | permission: owner |
-| TransferOwner | transfer own to other NEW Address | permission: owner |
-| CreateNewToken | Create new token from this contract |  |
-| AddMemberBySubscribe | | permission: contract |
-| RemoveMember | | permission: owner/admin |
-| RemoveExpiredMember | | permission: contract |
+| registerUser | register newid | register |
+| setNewPoolAddress | set new poll address | permission: owner |
+| setFeeOfRegisterUser | set register fee | permission: owner |
 
 
 ## Rationale (optional)
