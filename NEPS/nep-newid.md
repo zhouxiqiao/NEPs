@@ -38,6 +38,7 @@ The technical specification should describe the syntax and semantics of any new 
 | feeOfRegisterUser | register user fee | can not be changed |
 
 User Struct
+| Item | Description | Behaviors/Properties |
 |:-|:-|:-|
 | identity | register user's public key hash | * |
 | publicKey | register user's public hash | * |
